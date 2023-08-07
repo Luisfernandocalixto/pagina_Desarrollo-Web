@@ -1,0 +1,770 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    --main-color: #0089e4;
+    --second-color: #404145;
+}
+
+body {
+    height: 145vh;
+    width: 100%;
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), transparent),
+        url(../img/sirve.jpg );
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+header {
+    height: auto;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    box-sizing: border-box;
+    height: 100px;
+    transition: 0.5s;
+    background-Color: #121212;
+
+
+}
+
+.logo {
+    height: 70%;
+    border-radius: 110%;
+}
+
+/* .scrolled-search {
+    opacity: 1;
+    pointer-events: all;
+} */
+
+.main-menu {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-menu2 {
+    /*  display: flex; */
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+
+}
+
+.menu-item {
+    margin: 0 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.5s;
+    color: #f2f2f2;
+    font-weight: 600;
+}
+
+
+
+a {
+    color: #f2f2f2;
+    text-decoration: none;
+
+
+}
+
+.cta {
+    padding: 10px 24px;
+    border-radius: 30px;
+    background-color: var(--main-color);
+    color: #f2f2f2;
+    margin: 0 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.cta:hover {
+    color: #f2f2f2;
+    background-color: #04548a;
+}
+
+.menu-item:hover {
+    color: var(--main-color);
+}
+
+
+
+
+/* Titulo Header */
+.titulo {
+    color: #fff;
+    font-size: 50px;
+    text-align: center;
+
+}
+
+
+main .sobre-nosotros {
+    padding: 30px 0 60px 0;
+}
+
+.contenedor {
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+
+}
+
+.contenedor-sobre-nosotros {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 15px;
+}
+
+.about-elemento {
+
+    padding-bottom: 30px;
+
+}
+
+.servicio-elemento {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.servicio-ind {
+    border-radius: 10px;
+    background: #fff;
+    width: 28%;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 400ms ease;
+
+
+
+}
+
+.servicio-ind:hover {
+    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.4);
+    /*    transform: translateY(-3%); */
+
+}
+
+.servicio-ind img {
+    width: 40%;
+
+
+}
+
+.servicio-ind h3 {
+    color: #1d273b;
+    margin: 10px 0;
+}
+
+.servicio-ind p {
+
+    color: gray;
+    font-weight: 500;
+    text-align: justify;
+
+}
+
+/* Navegadores */
+
+.portafolio {
+    background: #f2f2f2;
+
+
+}
+
+.galeria-nav {
+
+    float: inline-end;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    opacity: 0.7;
+}
+
+.galeria-port {
+    display: flex;
+    justify-content: space-evenly;
+    /* flex-wrap: wrap; */
+    opacity: 0.7;
+
+}
+
+.imagen-port {
+    width: 24%;
+    /* height: 180px; */
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+}
+
+.imagen-port>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.hover-galeria {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: scale(0);
+    background: hsla(195, 86%, 47%, 0.7);
+
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hover-galeria img {
+    width: 50px;
+
+}
+
+.hover-galeria p {
+    color: #fff;
+}
+
+.imagen-port:hover .hover-galeria {
+    transform: scale(1);
+}
+
+
+.subtitle-other {
+    color: #1d273b;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 16px;
+    font-weight: 300;
+}
+
+/* 
+ */
+.containerImg {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 250px;
+    grid-gap: 20px;
+
+}
+
+.containerImg .box-img figure {
+    width: 100%;
+    height: 100%;
+}
+
+.containerImg .box-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.containerImg .box-img:nth-child(1) {
+    grid-column-start: span 2;
+}
+
+.containerImg .box-img:nth-child(4) {
+    grid-row-start: span 2;
+}
+
+/* Sub  */
+.container {
+
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 100px 0;
+    height: auto;
+}
+
+.container--modifier {
+    width: 60%;
+    text-align: center;
+}
+
+.other-copy-section {
+    text-align: justify;
+}
+
+.point {
+    color: var(--gold);
+}
+
+/* Elementos */
+.elementos {
+
+    background: transparent;
+}
+
+
+
+.subtitle {
+    color: #fff;
+    font-size: 42px;
+    text-align: center;
+    margin-bottom: 16px;
+
+}
+
+/*  */
+/* Lenguajes */
+.parrafol {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 20%;
+    padding-right: 20%;
+    text-align: justify;
+
+}
+
+.parrafol>i {
+    font-size: 30px;
+    color: #fff;
+    background: #04548a;
+    /*  display: inline-block; */
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    padding-top: 20px;
+    border-radius: 50%;
+    box-shadow: 0 8px 32px rgba(10, 96, 145, 0.46);
+
+}
+
+.title-other {
+    color: #1d273b;
+    text-align: justify;
+    font-size: 30px;
+    font-weight: 500;
+    padding: 20px;
+}
+
+/* Fin */
+/* Editor */
+.container-editor {
+    background: #3a7bd5;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3a6073, #3a7bd5);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3a6073, #3a7bd5);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.container-editor p {
+    color: #fff;
+    text-align: justify;
+}
+
+.container-editor .imgE {
+    text-align: center;
+}
+
+/*  */
+
+
+/* Editores de texto */
+.bodyEditor {
+    /*  width: 100%; */
+    /* height: 70vh; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 100px;
+    /* min-width: 45%;
+    max-width: -80%; */
+    /* font-family: ; */
+}
+
+.contenedorEditor {
+    /*  padding-left: 25%; */
+    width: 100%;
+    display: flex;
+    max-width: 1100px;
+
+}
+
+.cardEditor {
+    width: 100%;
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 400ms ease;
+}
+
+.cardEditor:hover {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    /*   transform: translateY(-3%); */
+
+}
+
+.cardEditor img {
+    width: 100%;
+    height: 250px;
+
+
+}
+
+.cardEditor .contenidoEditor {
+    padding: 15px;
+    text-align: justify;
+}
+
+.cardEditor .contenidoEditor p {
+    line-height: 1.5;
+    color: #6a6a6a;
+}
+
+.cardEditor .contenidoEditor h3 {
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+/* Futuro */
+.encabezado-wrap {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, rgb(0 0 0 /.3), rgb(0 0 0 /.3)), url(../img/DesarrolloWeb.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.wrap-texto {
+    color: #fff;
+    text-align: center;
+    width: 50%;
+}
+
+
+/* Footer */
+footer {
+    background: #414141;
+    padding: 60px 0 30px 0;
+    margin: auto;
+    overflow: hidden;
+}
+
+.contenedor-footer {
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ccc;
+}
+
+.content-foo {
+    text-align: center;
+
+}
+
+.content-foo h4 {
+    color: #fff;
+    border-bottom: 3px solid #af20d3;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.content-foo p {
+    color: #ccc;
+
+}
+
+.titulo-final {
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0 0 0;
+    color: #9e9797;
+
+}
+
+
+
+
+@media screen and (max-width:900px) {
+    header {
+        background-position: center;
+    }
+
+    .contenedor-sobre-nosotros {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sobre-nosotros .contenido-textos {
+        width: 90%;
+    }
+
+    .imagen-about-us {
+        width: 90%;
+    }
+
+    /* Galeria  */
+    .imagen-port {
+        width: 44%;
+    }
+
+    /* Clientes  */
+    .cards {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cards .card {
+        width: 90%;
+    }
+
+    .cards .card:first-child {
+        margin-bottom: 30px;
+    }
+
+    /* Servicios */
+    .servicio-elemento {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .servicio-ind {
+        width: 100%;
+        text-align: center;
+    }
+
+    .servicio-ind:nth-child(1),
+    .servicio-ind:nth-child(2) {
+        margin-bottom: 60px;
+    }
+
+    .servicio-ind img {
+        width: 90%;
+    }
+
+    .subtitle-other {
+        font-size: 30px;
+    }
+
+    .titulo {
+        font-size: 30px;
+
+    }
+
+    /* Navegadores */
+    .containerImg {
+        width: 95%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        grid-template-rows: 200px;
+
+    }
+
+    .containerImg .box-img:nth-child(1) {
+        grid-column-start: span 1;
+    }
+
+    /* Editor */
+    .container-editor {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+
+    .container-editor .imgE {
+        width: 90%;
+        height: 90%;
+        padding: 30px 100px 40px 40px;
+    }
+
+    .contenedorEditor {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .cardEditor {
+        width: 90%;
+        text-align: center;
+
+    }
+
+    .cardEditor img {
+        width: 90%;
+    }
+
+    /* Aplicaciones */
+    .title-other {
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .subtitle-other {
+        text-align: center;
+        font-size: 30px;
+    }
+
+    /* Encabezado futuro */
+
+
+
+    @media screen and(max-width:500px) {
+        nav {
+
+            text-align: center;
+            padding: 30px 0 0 0;
+        }
+
+        nav a {
+            margin-right: 5px;
+
+        }
+
+        .main-menu2 {
+
+            flex-direction: column;
+
+        }
+
+
+
+
+
+        .textos-header h1 {
+            font-size: 35px;
+        }
+
+        .textos-header h2 {
+            font-size: 20px;
+        }
+
+
+
+    }
+
+
+    .imagen-about-us {
+        margin-bottom: 60px;
+        width: 99%;
+    }
+
+    .sobre-nosotros .contenido-textos {
+        width: 95%;
+    }
+
+    /* Galeria */
+    .imagen-port {
+        width: 95%;
+    }
+
+    /* Clientes */
+    .cards .card {
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .cards .card img {
+        width: 90px;
+        height: 90px;
+    }
+
+    /* Footer */
+    .contenedor-footer {
+        flex-direction: column;
+        border: none;
+    }
+
+    .content-foo {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .content-foo h4 {
+        border: none;
+
+    }
+
+    .content-foo p {
+        color: #ccc;
+        border-bottom: 1px solid #f2f2f2;
+        padding-bottom: 20px;
+    }
+
+    .titulo-final {
+        font-size: 20px;
+    }
+
+    /* Navegadores */
+    .containerImg {
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .containerImg .box-img {
+        height: 200px;
+    }
+
+    /* Parrafol */
+    .parrafol {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    /* Editor */
+    .container-editor {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .cardEditor {
+        width: 90%;
+    }
+
+    .imgE img {
+        width: 150%;
+        height: 150%;
+        object-fit: cover;
+
+    }
+
+
+}
+
+/*  */
